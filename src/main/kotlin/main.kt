@@ -82,9 +82,9 @@ class CalcNumPar {
                 // Matematica loca pra ver se eh par
                 val resultado = t % 2
                 val ehPar = 0
-                if (resultado == ehPar)
+                if (t % 2 == ehPar)
                 {
-                    if (resultado == 0) {
+                    if (t % 2 == 0) {
                         // Naum pode ce 2
                         if (t != 2) {
                             // @TODO: Refatorar somente esse bloco
