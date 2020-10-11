@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
 class Inicio(val numbres: MutableList<String>, val numero_Par: MutableList<Int>, val param: String) {
 
     fun inicio() {
-        criartabelas()
+        criartbelas()
 
         val CalcularNumeroPar = CalcNumPar()
         CalcularNumeroPar.cal(numbres, numero_Par)
