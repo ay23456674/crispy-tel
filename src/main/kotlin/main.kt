@@ -82,7 +82,7 @@ class CalcNumPar {
                 // Matematica loca pra ver se eh par
                 val resultado = t % 2
                 val ehPar = 0
-                if (t % 2 == ehPar)
+                if (t % 2 == 0)
                 {
                     if (t % 2 == 0) {
                         // Naum pode ce 2
