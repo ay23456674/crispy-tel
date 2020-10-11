@@ -35,7 +35,6 @@ class Inicio(val numbres: MutableList<String>, val numero_Par: MutableList<Int>,
             prepareStatement.execute()
             val rs = prepareStatement.resultSet
             while (rs.next()) {
-                // read the result set
                 numero_Par.add(rs.getInt("num"))
             }
         }
@@ -50,7 +49,6 @@ class Inicio(val numbres: MutableList<String>, val numero_Par: MutableList<Int>,
             prepareStatement.execute()
             val rs = prepareStatement.resultSet
             while (rs.next()) {
-                // read the result set
                 numbres.add(rs.getString("num"))
             }
         }
@@ -87,8 +85,10 @@ class CalcNumPar {
                     if (t % 2 == 0) {
                         // Naum pode ce 2
                         if (t != 2) {
-                            // @TODO: Refatorar somente esse bloco
-                            print(t)
+                            if (t % 2 == ehPar) {
+                                // @TODO: Refatorar somente esse bloco
+                                print(t)
+                            }
                         }
                         else {
                             // pass
