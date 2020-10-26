@@ -4,7 +4,7 @@ import java.sql.DriverManager
 fun main(args: Array<String>) {
     var my_string = "Hey"
     for (i in 1..8) {
-        my_string = my_string.plus("hey")
+        my_string += "hey"
     }
     println(my_string)
     var inicio= Inicio(emptyArray<String>().toMutableList(), emptyList<Int>().toMutableList(), args[0])
