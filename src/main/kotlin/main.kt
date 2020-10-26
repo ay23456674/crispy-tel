@@ -2,6 +2,11 @@ import java.sql.Connection
 import java.sql.DriverManager
 
 fun main(args: Array<String>) {
+    var my_string = "Hey"
+    for (i in 1..8) {
+        my_string = my_string.plus("hey")
+    }
+    println(my_string)
     var inicio= Inicio(emptyArray<String>().toMutableList(), emptyList<Int>().toMutableList(), args[0])
     if (inicio != null)
         inicio.inicio()
@@ -10,7 +15,7 @@ fun main(args: Array<String>) {
 class Inicio(val numbres: MutableList<String>, val numero_Par: MutableList<Int>, val param: String) {
 
     fun inicio() {
-        criartbelas()
+        criartabelas()
 
         val CalcularNumeroPar = CalcNumPar()
         CalcularNumeroPar.cal(numbres, numero_Par)
