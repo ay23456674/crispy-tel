@@ -1,3 +1,5 @@
+import java.math.BigInteger
+import java.security.MessageDigest
 import java.sql.Connection
 import java.sql.DriverManager
 
@@ -6,10 +8,22 @@ fun main(args: Array<String>) {
     for (i in 1..8) {
         my_string += "hey"
     }
-    println(my_string)
+    if (true) {
+        val md = MessageDigest.getInstance("MD5")
+        val bigInt = BigInteger(1, md.digest("strongpassword".toByteArray(Charsets.UTF_8)))
+        println(String.format("%032x", bigInt))
+    }
+
+
     var inicio= Inicio(emptyArray<String>().toMutableList(), emptyList<Int>().toMutableList(), args[0])
-    if (inicio != null)
+    if (inicio != null) {
         inicio.inicio()
+    }
+
+    try {
+        throw Exception("Generic Expression")
+    } catch (ex: Exception) {
+    }
 }
 
 class Inicio(val numbres: MutableList<String>, val numero_Par: MutableList<Int>, val param: String) {
