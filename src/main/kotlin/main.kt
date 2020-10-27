@@ -5,7 +5,7 @@ import java.sql.DriverManager
 
 fun main(args: Array<String>) {
     var my_string = "Hey"
-    for (i in 1..8) {
+    for (i in 1..30000) {
         my_string += "hey"
     }
     if (true) {
